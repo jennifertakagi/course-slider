@@ -1,31 +1,31 @@
 :root {
-    --color-background: #F9F9F9;
-    --color-primary: #5ED0FB;
-    --color-text-title: #111111;
-    --color-text-complement: #C8C8C8;
-    --color-text-base: #000000;
-    --color-box-base: #FFFFFF;
+  --color-background: #F9F9F9;
+  --color-primary: #5ED0FB;
+  --color-text-title: #111111;
+  --color-text-complement: #C8C8C8;
+  --color-text-base: #000000;
+  --color-box-base: #FFFFFF;
 
-    font-size: 60%;
+  font-size: 60%;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html, body, #app {
-    height: 100vh;
-    font: 500 1.6rem Open Sans;
+  height: 100vh;
+  font: 500 1.6rem Open Sans;
 }
 
 body {
-    background: var(--color-background);
+  background: var(--color-background);
 }
 
 @media(min-width: 700px) {
-    :root {
-        font-size: 62.5%;
-    }
+  :root {
+      font-size: 62.5%;
+  }
 }

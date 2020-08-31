@@ -10,11 +10,13 @@
       />
       <div class="duration-box">
         <img
-          class="clock-img "
+          class="clock-img"
           src="@/assets/icons/clock.svg"
-          alt="Clock icon representing episode duration"
+          :alt="this.imageClockAlt"
         />
-        <span :aria-label="this.buttonDurationAriaLabel">
+        <span
+          :aria-label="this.buttonDurationAriaLabel"
+        >
           {{this.duration}}
         </span>
       </div>
@@ -25,32 +27,54 @@
 <script>
 export default {
   name: 'Card',
+  data() {
+    return {
+      /**
+       * Clock's image alt text
+       */
+      imageClockAlt: 'Clock icon representing episode duration',
+    };
+  },
   props: {
+    /**
+     * Podcast's episode duration
+     */
     duration: {
       type: String,
       required: true,
     },
+    /**
+     * Job's title of the podcast's speaker
+     */
     jobTitle: {
       type: String,
       required: true,
     },
+    /**
+     * Podcast's speaker name
+     */
     name: {
       type: String,
       required: true,
     },
+    /**
+     * Podcast's episode title
+     */
     title: {
       type: String,
       required: true,
     },
-    categories: {
-      type: Array,
-      required: true,
-    },
   },
   computed: {
+    /**
+     * Aria label to the play episode's button
+     */
     buttonPlayAriaLabel() {
       return `Click here to play episode about ${this.title}`;
     },
+    /**
+     * Aria label to the duration episode's text
+     */
     buttonDurationAriaLabel() {
       return `The episode duration is ${this.duration}`;
     },

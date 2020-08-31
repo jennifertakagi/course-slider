@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     /**
-     * Emits 'filterByCategory' event on mouse behavior
+     * Emits 'filterByCategory' event on click behavior
      * and send the category to be filterd by
      */
     emitCategory(value) {

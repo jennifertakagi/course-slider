@@ -4,7 +4,7 @@
     :class="{ activate: isActive }"
     :aria-label="category"
     tabindex="0"
-    @mouseover="emitHoverEvent"
+    @click="emitClickEvent"
   >
     {{category}}
   </li>
@@ -31,10 +31,10 @@ export default {
   },
   methods: {
     /**
-     * Emits 'filterCategory' event on mouse over
+     * Emits 'filterCategory' event on click
      * and send the category to be filterd by
      */
-    emitHoverEvent() {
+    emitClickEvent() {
       this.$emit('filterCategory', this.category);
     },
   },
@@ -53,6 +53,7 @@ export default {
       list-style-type: none;
       height: 25px;
       position: relative;
+      cursor: pointer;
     }
 
     .category-text:after {

@@ -116,7 +116,7 @@ export default {
     }
 
     .title-line {
-      width: 500px;
+      width: 58%;
     }
 
     .shadow-title {

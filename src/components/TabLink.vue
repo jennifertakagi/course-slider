@@ -1,6 +1,7 @@
 <template>
   <li
     class="category-text"
+    :class="{ activate: isActive }"
     :aria-label="category"
     tabindex="0"
     @mouseover="emitHoverEvent"
@@ -19,6 +20,13 @@ export default {
      */
     category: {
       type: String,
+      required: true,
+    },
+    /**
+     * Checks if the category is active
+     */
+    isActive: {
+      type: Boolean,
       required: true,
     },
   },
@@ -53,7 +61,7 @@ export default {
     height: 25px;
   }
 
-  .category-text:hover {
+  .category-text.activate {
     border-bottom: 2px solid var(--color-text-title);
     cursor: pointer;
   }

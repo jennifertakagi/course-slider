@@ -6,6 +6,7 @@
         v-for="category in categories"
         :key="category"
         :category="category"
+        :isActive="category === categoryActive"
         @filterCategory="emitCategory"
       />
     </ul>
@@ -28,6 +29,13 @@ export default {
     categories: {
       type: Array,
       required: true,
+    },
+    /**
+     * Category that is active
+     */
+    categoryActive: {
+      type: String,
+      requerid: true,
     },
   },
   methods: {

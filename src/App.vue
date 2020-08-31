@@ -3,6 +3,7 @@
     <SectionTitle />
     <TabMenu
       :categories="uniqueCategoriesList"
+      :categoryActive="categoryActive"
       @filterByCategory="filterCategory"
     />
     <div class="card-container">
@@ -45,11 +46,16 @@ export default {
        * List of the unique podcast's categories
        */
       uniqueCategoriesList: [],
+      /**
+       * The active category
+       */
+      categoryActive: null,
     };
   },
   mounted() {
     this.episodesList = api;
     this.uniqueCategoriesList = this.getUniqueCategories;
+    this.filterCategory('new');
   },
   computed: {
     /**
@@ -73,11 +79,13 @@ export default {
      * @param {String} value category to filter
      * @returns {void}
      */
-    filterCategory(value) {
+    filterCategory(value = 'new') {
       if (!value) {
+        this.categoryActive = 'new';
         this.episodesList = api;
         return;
       }
+      this.categoryActive = value;
       this.episodesList = (this.episodesList || []).filter(episode => episode.categories.includes(value));
     },
   },

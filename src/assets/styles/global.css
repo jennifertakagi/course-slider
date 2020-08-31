@@ -2,7 +2,7 @@
   --color-background: #F9F9F9;
   --color-primary: #5ED0FB;
   --color-text-title: #111111;
-  --color-text-complement: #C8C8C8;
+  --color-text-complement: #777777;
   --color-text-base: #000000;
   --color-box-base: #FFFFFF;
 
@@ -26,6 +26,6 @@ body {
 
 @media(min-width: 700px) {
   :root {
-      font-size: 62.5%;
+    font-size: 62.5%;
   }
 }

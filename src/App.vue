@@ -1,28 +1,50 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <div class="card-container">
+      <Card
+        v-for="course in courseList"
+        :key="course.id"
+        :duration="course.duration"
+        :jobTitle="course.jobTitle"
+        :name="course.name"
+        :title="course.title"
+        :categories="course.categories"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+
+import api from './services/api';
+import Card from './components/Card';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Card,
+  },
+  data() {
+    return {
+      courseList: null,
+    };
+  },
+  mounted() {
+    this.courseList = api;
   },
 };
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: -webkit-box;;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 </style>

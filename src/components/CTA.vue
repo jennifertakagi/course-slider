@@ -29,6 +29,8 @@ export default {
 <style scoped>
 #button-view-more {
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
   color: var(--color-text-base);
   width: 146px;
   height: 50px;
@@ -36,5 +38,11 @@ export default {
   margin: 3% auto;
   text-align: center;
   border: 2px solid var(--color-text-base);
+  letter-spacing: 1px;
+}
+
+#button-view-more:hover {
+  color: var(--color-box-base);
+  background-color: var(--color-text-base);
 }
 </style>

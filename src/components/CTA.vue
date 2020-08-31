@@ -52,8 +52,12 @@ export default {
     letter-spacing: 1px;
   }
 
-  #button-view-more:hover {
-    color: var(--color-box-base);
-    background-color: var(--color-text-base);
+  @media only screen and (min-width: 550px) {
+    #button-view-more:hover {
+      color: var(--color-box-base);
+      background-color: var(--color-text-base);
+      transition: background-color 0.4s;
+    }
   }
+
 </style>

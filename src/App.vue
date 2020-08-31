@@ -110,7 +110,7 @@ export default {
   ::-webkit-scrollbar {
     height: 4px;
     width: 4px;
-    border: 1px solid var(--color-text-shadow);
+    border: 4px solid var(--color-text-shadow);
   }
 
   @media only screen and (min-width: 1207px) {

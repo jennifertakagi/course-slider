@@ -18,8 +18,17 @@ export default {
   name: 'SectionTitle',
   data() {
     return {
+      /**
+       * Section's title
+       */
       title: 'Last',
+      /**
+       * Section's subtitle
+       */
       subtile: 'Episodes',
+      /**
+       * Section's shadow title
+       */
       shadowTitle: 'Episodes',
     };
   },

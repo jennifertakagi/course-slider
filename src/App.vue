@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <SectionTitle />
     <div class="card-container">
       <Card
         v-for="course in courseList"
@@ -17,11 +18,13 @@
 <script>
 
 import api from './services/api';
+import SectionTitle from './components/SectionTitle';
 import Card from './components/Card';
 
 export default {
   name: 'App',
   components: {
+    SectionTitle,
     Card,
   },
   data() {
@@ -37,7 +40,7 @@ export default {
 
 <style>
 #app {
-  display: -webkit-box;;
+  display: grid;
   align-items: center;
   justify-content: center;
 }

@@ -4,7 +4,8 @@
     :class="{ activate: isActive }"
     :aria-label="category"
     tabindex="0"
-    @click="emitClickEvent"
+    @click.prevent="emitClickEvent"
+    @keyup.tab="emitClickEvent"
   >
     {{category}}
   </li>

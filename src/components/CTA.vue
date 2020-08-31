@@ -16,9 +16,21 @@ export default {
   name: 'CTA',
   data() {
     return {
+      /**
+       * Link's label
+       */
       linkLabel: 'View More',
+      /**
+       * Link's arial label
+       */
       linkAriaLabel: 'Click to view more episodes',
+      /**
+       * Link's title
+       */
       linkTitle: 'Clicking on this button you will navigate to Valtech website',
+      /**
+       * Link's url (to use on href)
+       */
       linkURL: '//www.valtech.com/insights/',
     };
   },

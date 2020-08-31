@@ -1,7 +1,6 @@
 <template>
   <li
     class="category-text"
-    :class="{ active: hover }"
     :aria-label="category"
     tabindex="0"
     @mouseover="emitHoverEvent"
@@ -14,25 +13,27 @@
 <script>
 export default {
   name: 'TabLink',
-  data() {
-    return {
-      hover: false,
-    };
-  },
   props: {
+    /**
+     * Category name
+     */
     category: {
       type: String,
       required: true,
     },
-    index: {
-      type: Number,
-      required: true,
-    },
   },
   methods: {
+    /**
+     * Emits 'filterCategory' event on mouse over
+     * and send the category to be filterd by
+     */
     emitHoverEvent() {
       this.$emit('filterCategory', this.category);
     },
+    /**
+     * Emits 'filterCategory' event on mouse leave
+     * and send no value, to return all categories
+     */
     emitEventLeave() {
       this.$emit('filterCategory', '');
     },

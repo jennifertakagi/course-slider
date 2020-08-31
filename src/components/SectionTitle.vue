@@ -1,7 +1,7 @@
 <template>
   <header id="title-section">
     <div class="blue-ball" />
-    <h1>{{this.title}}</h1>
+    <h1 tabindex="0">{{this.title}}</h1>
     <h2 class="shadow-title">{{this.shadowTitle}}</h2>
     <hr class="title-line" />
   </header>

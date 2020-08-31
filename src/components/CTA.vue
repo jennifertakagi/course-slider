@@ -1,6 +1,5 @@
 <template>
   <a
-    tabindex="0"
     role="button"
     aria-pressed="false"
     :aria-label="this.linkAriaLabel"

@@ -5,7 +5,7 @@ const api = [
     name: 'Jacqueline Cardozo',
     jobTitle: 'Front-end Dev Leader',
     duration: '45 min',
-    category: ['new', 'development'],
+    categories: ['new', 'development'],
   },
   {
     id: 1,
@@ -13,7 +13,7 @@ const api = [
     name: 'João Olivio',
     jobTitle: 'Front-end Dev Leader',
     duration: '1h 15 min',
-    category: ['new', 'development'],
+    categories: ['new', 'development'],
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const api = [
     name: 'Derrick Pierce',
     jobTitle: 'Front-end Dev Leader',
     duration: '2h 35 min',
-    category: ['new', 'project management'],
+    categories: ['new', 'project management'],
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const api = [
     name: 'Thomas Cardoso',
     jobTitle: 'Designer',
     duration: '1h 50 min',
-    category: ['new', 'design'],
+    categories: ['new', 'design'],
   },
 ];
 

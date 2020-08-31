@@ -1,5 +1,6 @@
 <template>
   <div id="section-container">
+    <div class="blue-ball" />
     <h1>{{this.title}}</h1>
     <h2 class="shadow-title">{{this.shadowTitle}}</h2>
     <hr class="title-line" />
@@ -45,6 +46,18 @@ h1 {
   font-size: 12.5rem;
   color: var(--color-text-shadow);
   z-index: -1;
+}
+
+
+.blue-ball {
+  background-color: var(--color-primary);
+  height: 554px;
+  width: 554px;
+  border-radius: 50%;
+  z-index: -2;
+  position: absolute;
+  top: -7%;
+  left: -4%;
 }
 
 </style>

@@ -59,64 +59,64 @@ export default {
 </script>
 
 <style scoped>
-#card-section {
-  font-size: 1.3rem;
-  font-weight: 700;
-  background-color: var(--color-box-base);
-  border-radius: 4px;
-  padding: 32px;
-  position: relative;
-  width: 262px;
-  height: 342px;
-  text-align: left;
-}
+  #card-section {
+    font-size: 1.3rem;
+    font-weight: 700;
+    background-color: var(--color-box-base);
+    border-radius: 4px;
+    padding: 32px;
+    position: relative;
+    width: 262px;
+    height: 342px;
+    text-align: left;
+  }
 
-#card-section:hover {
-  box-shadow: 0px 0px 20px #0000001A;
-}
+  #card-section:hover {
+    box-shadow: 0px 0px 20px #0000001A;
+  }
 
-#card-section > h3 {
-  font-size: 2.8rem;
-  font-weight: 100;
-  text-transform: uppercase;
-  color: var(--color-text-base);
-  padding-bottom: 16px;
-}
+  #card-section > h3 {
+    font-size: 2.8rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: var(--color-text-base);
+    padding-bottom: 16px;
+  }
 
-#card-section p:first-of-type {
-  font-size: 1.6rem;
-}
+  #card-section p:first-of-type {
+    font-size: 1.6rem;
+  }
 
-.job-title-text {
-  color: var(--color-text-complement);
-  font-weight: 100;
-  font-size: 1.3rem;
-  padding-top: 4px;
-}
+  .job-title-text {
+    color: var(--color-text-complement);
+    font-weight: 100;
+    font-size: 1.3rem;
+    padding-top: 4px;
+  }
 
-.play-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 32px;
-  font-weight: 100;
-  width: 85%;
-}
+  .play-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 32px;
+    font-weight: 100;
+    width: 85%;
+  }
 
-button {
-  background-image: url("../assets/icons/play.svg");
-  background-repeat: no-repeat;
-  border: none;
-  background-color: transparent;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-}
+  button {
+    background-image: url("../assets/icons/play.svg");
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
 
-.clock-img {
-  width: 35px;
-  margin-right: 5px;
-  vertical-align: middle
-}
+  .clock-img {
+    width: 35px;
+    margin-right: 5px;
+    vertical-align: middle
+  }
 </style>

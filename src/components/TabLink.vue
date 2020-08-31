@@ -41,20 +41,19 @@ export default {
 </script>
 
 <style scoped>
-.category-text {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: var(--color-text-title);
-  text-align: center;
-  letter-spacing: 2.31px;
-  list-style-type: none;
-  height: 25px;
-}
+  .category-text {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-text-title);
+    text-align: center;
+    letter-spacing: 2.31px;
+    list-style-type: none;
+    height: 25px;
+  }
 
-.category-text:hover {
-  border-bottom: 2px solid var(--color-text-title);
-  cursor: pointer;
-}
-
+  .category-text:hover {
+    border-bottom: 2px solid var(--color-text-title);
+    cursor: pointer;
+  }
 </style>

@@ -41,14 +41,19 @@ export default {
 </script>
 
 <style scoped>
-.menu-container {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-  margin: 0 auto 5%;
-}
+  #menu-section {
+    display: none;
+  }
 
-.visuallyhidden {
-  display: none;
-}
+  @media only screen and (min-width: 1207px) {
+    #menu-section {
+      display: block;
+    }
+    .menu-container {
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+      margin: 0 auto 6%;
+    }
+  }
 </style>

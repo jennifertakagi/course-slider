@@ -70,15 +70,23 @@ export default {
 </script>
 
 <style>
-#app {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
+  #app {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
 
-.card-container {
-  display: grid;
-  grid-column-gap: 50px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
+  .card-container {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    overflow-x: hidden;
+    margin-left: 15%;
+  }
+
+  @media only screen and (min-width: 1207px) {
+    .card-container {
+      margin-left: 0;
+    }
+  }
 </style>

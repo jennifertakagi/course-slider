@@ -37,13 +37,6 @@ export default {
     emitHoverEvent() {
       this.$emit('filterCategory', this.category);
     },
-    /**
-     * Emits 'filterCategory' event on mouse leave
-     * and send no value, to return all categories
-     */
-    emitEventLeave() {
-      this.$emit('filterCategory', '');
-    },
   },
 };
 </script>

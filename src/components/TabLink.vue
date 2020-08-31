@@ -3,7 +3,7 @@
     class="category-text"
     :class="{ active: hover }"
     :aria-label="category"
-    :tabindex="index"
+    tabindex="0"
     @mouseover="emitHoverEvent"
     @mouseleave="emitEventLeave"
   >

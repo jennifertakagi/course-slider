@@ -21,18 +21,20 @@ export default {
   components: {
     TabLink,
   },
-  data() {
-    return {
-      hover: false,
-    };
-  },
   props: {
+    /**
+     * All podcast's categories
+     */
     categories: {
       type: Array,
       required: true,
     },
   },
   methods: {
+    /**
+     * Emits 'filterByCategory' event on mouse behavior
+     * and send the category to be filterd by
+     */
     emitCategory(value) {
       this.$emit('filterByCategory', value);
     },
@@ -49,6 +51,7 @@ export default {
     #menu-section {
       display: block;
     }
+
     .menu-container {
       display: flex;
       justify-content: space-between;

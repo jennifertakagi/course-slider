@@ -1,25 +1,30 @@
 <template>
   <nav id="menu-section" aria-label="mainmenulabel">
-    <ul
-      v-for="category in categories"
-      :key="category"
-    >
+    <ul class="menu-container">
       <h2 id="mainmenulabel" class="visuallyhidden">Main Menu</h2>
-      <li
-        :aria-label="category"
-        class="category-text"
-      >
-        {{category}}
-      </li>
+      <TabLink
+        v-for="(category, index) in categories"
+        :key="category"
+        :index="index"
+        :category="category"
+        @filterCategory="emitCategory"
+      />
     </ul>
   </nav>
 </template>
 
 <script>
+
+import TabLink from './TabLink';
+
 export default {
   name: 'TabMenu',
+  components: {
+    TabLink,
+  },
   data() {
     return {
+      hover: false,
     };
   },
   props: {
@@ -28,11 +33,16 @@ export default {
       required: true,
     },
   },
+  methods: {
+    emitCategory(value) {
+      this.$emit('filterByCategory', value);
+    },
+  },
 };
 </script>
 
 <style scoped>
-#menu-section {
+.menu-container {
   display: flex;
   justify-content: space-between;
   width: 50%;
@@ -42,21 +52,4 @@ export default {
 .visuallyhidden {
   display: none;
 }
-
-.category-text {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: var(--color-text-title);
-  text-align: center;
-  letter-spacing: 2.31px;
-  list-style-type: none;
-  height: 25px;
-}
-
-.category-text:hover {
-  border-bottom: 2px solid var(--color-text-title);
-  cursor: pointer;
-}
-
 </style>

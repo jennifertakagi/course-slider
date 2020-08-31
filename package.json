@@ -1,7 +1,7 @@
 {
-  "name": "course-slider",
+  "name": "podcast-episodes",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "Check out the new podcast's episodes available!",
   "author": "jennifertakagi <jennitakagi@gmail.com>",
   "private": true,
   "scripts": {

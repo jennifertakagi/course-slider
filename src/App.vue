@@ -41,7 +41,7 @@ export default {
       /**
        * List of all podcast's episodes
        */
-      episodesList: null,
+      episodesList: [],
       /**
        * List of the unique podcast's categories
        */
@@ -49,7 +49,7 @@ export default {
       /**
        * The active category
        */
-      categoryActive: null,
+      categoryActive: '',
     };
   },
   mounted() {
@@ -86,7 +86,7 @@ export default {
         return;
       }
       this.categoryActive = value;
-      this.episodesList = (this.episodesList || []).filter(episode => episode.categories.includes(value));
+      this.episodesList = this.episodesList.filter(episode => episode.categories.includes(value));
     },
   },
 };
@@ -103,8 +103,14 @@ export default {
     display: grid;
     grid-column-gap: 50px;
     grid-template-columns: repeat(4, 1fr);
-    overflow-x: hidden;
+    overflow-x: auto;
     margin-left: 15%;
+  }
+
+  ::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+    border: 1px solid var(--color-text-shadow);
   }
 
   @media only screen and (min-width: 1207px) {

@@ -7,13 +7,12 @@
     />
     <div class="card-container">
       <Card
-        v-for="course in courseList"
-        :key="course.id"
-        :duration="course.duration"
-        :jobTitle="course.jobTitle"
-        :name="course.name"
-        :title="course.title"
-        :categories="course.categories"
+        v-for="episode in episodesList"
+        :key="episode.id"
+        :duration="episode.duration"
+        :jobTitle="episode.jobTitle"
+        :name="episode.name"
+        :title="episode.title"
       />
     </div>
     <CTA />
@@ -38,19 +37,29 @@ export default {
   },
   data() {
     return {
-      courseList: null,
+      /**
+       * List of all podcast's episodes
+       */
+      episodesList: null,
+      /**
+       * List of the unique podcast's categories
+       */
       uniqueCategoriesList: [],
     };
   },
   mounted() {
-    this.courseList = api;
+    this.episodesList = api;
     this.uniqueCategoriesList = this.getUniqueCategories;
   },
   computed: {
+    /**
+     * Gets the unique podcast's categories
+     * @returns {Array} array with the unique categories
+     */
     getUniqueCategories() {
-      const allCategories = (api || []).reduce((uniqueCategories, course) => {
-        if (course && course.categories && course.categories.length) {
-          uniqueCategories.push(...course.categories);
+      const allCategories = (api || []).reduce((uniqueCategories, episode) => {
+        if (episode && episode.categories && episode.categories.length) {
+          uniqueCategories.push(...episode.categories);
         }
         return uniqueCategories;
       }, []);
@@ -58,12 +67,18 @@ export default {
     },
   },
   methods: {
+    /**
+     * Filters episode's by the category, and updates
+     * the the 'episode' data
+     * @param {String} value category to filter
+     * @returns {void}
+     */
     filterCategory(value) {
       if (!value) {
-        this.courseList = api;
+        this.episodesList = api;
         return;
       }
-      this.courseList = this.courseList.filter(course => course.categories.includes(value));
+      this.episodesList = (this.episodesList || []).filter(episode => episode.categories.includes(value));
     },
   },
 };

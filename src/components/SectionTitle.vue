@@ -1,10 +1,10 @@
 <template>
-  <div id="section-container">
+  <header id="title-section">
     <div class="blue-ball" />
     <h1>{{this.title}}</h1>
     <h2 class="shadow-title">{{this.shadowTitle}}</h2>
     <hr class="title-line" />
-  </div>
+  </header>
 </template>
 
 <script>
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style scoped>
-#section-container {
+#title-section {
   margin: 7% 0 5%;
   position: relative;
 }

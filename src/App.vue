@@ -80,11 +80,7 @@ export default {
      * @returns {void}
      */
     filterCategory(value = 'new') {
-      if (!value) {
-        this.categoryActive = 'new';
-        this.episodesList = api;
-        return;
-      }
+      this.episodesList = api;
       this.categoryActive = value;
       this.episodesList = this.episodesList.filter(episode => episode.categories.includes(value));
     },

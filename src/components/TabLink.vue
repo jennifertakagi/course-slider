@@ -5,7 +5,6 @@
     :aria-label="category"
     tabindex="0"
     @mouseover="emitHoverEvent"
-    @mouseleave="emitEventLeave"
   >
     {{category}}
   </li>

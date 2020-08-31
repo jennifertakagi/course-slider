@@ -1,11 +1,10 @@
 <template>
   <nav id="menu-section" aria-label="mainmenulabel">
     <ul class="menu-container">
-      <h2 id="mainmenulabel" class="visuallyhidden">Main Menu</h2>
+      <h2 id="mainmenulabel" hidden>Main Menu</h2>
       <TabLink
-        v-for="(category, index) in categories"
+        v-for="category in categories"
         :key="category"
-        :index="index"
         :category="category"
         @filterCategory="emitCategory"
       />

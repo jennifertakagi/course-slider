@@ -4,7 +4,7 @@
 
 # Podcast Episodes Landing Page
 
-> Check out the new podcast's episodes available!:)
+> Check out the new podcast's episodes available! https://podcast-episodes.vercel.app/:)
 
 [![Author](https://img.shields.io/badge/author-jennifertakagi-ff9000?style=flat-square)](https://github.com/jennifertakagi)
 [![Languages](https://img.shields.io/github/languages/count/jennifertakagi/podcast-episodes?color=%23ff9000&style=flat-square)](#)
